@@ -1,0 +1,487 @@
+{
+	"info": {
+		"_postman_id": "bc20f9c7-e175-4834-889e-7b1d640d77c1",
+		"name": "AlgaMoneyAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Salvar Categorias",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\" : \"Categoria Teste 3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/categorias/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"categorias",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Categorias",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "localhost:8080/categorias",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"categorias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Categorias Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/categorias/14",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"categorias",
+						"14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Salvar Pessoas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\" : \"Teste Atualizar Pessoa\",\r\n    \"endereco\": \r\n        {\r\n            \"logradouro\" : \"Av. Ferrovia\",\r\n             \"numero\" : \"286\",\r\n             \"complemento\": \"casa\",\r\n             \"bairro\": \"Altinópolis\",\r\n             \"cep\":\"35053730\",\r\n             \"cidade\":\"Governador Valadares\",\r\n             \"estado\":\"MG\"\r\n        },\r\n        \"ativo\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/pessoas/15",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pessoas",
+						"15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Pessoa",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\" : \"Atualiza Status 3\",\r\n    \"endereco\": \r\n        {\r\n            \"logradouro\" : \"Av. Ferrovia\",\r\n             \"numero\" : \"100\",\r\n             \"complemento\": \"Apt. 08\",\r\n             \"bairro\": \"Altinópolis\",\r\n             \"cep\":\"35053730\",\r\n             \"cidade\":\"Governador Valadares\",\r\n             \"estado\":\"MG\"\r\n        },\r\n        \"ativo\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/pessoas/15",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pessoas",
+						"15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar Pessoa",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/pessoas/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pessoas",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Pessoas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/pessoas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pessoas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Pessoas Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/pessoas/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pessoas",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Pessoa Ativa",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "null",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/pessoas/15/ativo",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pessoas",
+						"15",
+						"ativo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Salvar Lançamento",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"descricao\" : \"Lançamento Teste\",\r\n    \"dataVencimento\" : \"24/10/2022\",\r\n    \"dataPagamento\" : \"24/10/2022\",\r\n    \"valor\" : 100,\r\n    \"observacao\" : \"Teste observacao\",\r\n    \"tipo\" : \"RECEITA\",\r\n     \"categoria\" :\r\n     {\r\n         \"id\" : 1\r\n     },\r\n     \"pessoa\" : \r\n     {\r\n        \"id\" : 1\r\n     }    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/lancamentos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lancamentos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Lançamentos Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/lancamentos/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lancamentos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Lançamentos descricao",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/lancamentos?descricao=teste2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lancamentos"
+					],
+					"query": [
+						{
+							"key": "descricao",
+							"value": "teste2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Lançamentos dataVencimentoDe",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/lancamentos?dataVencimentoDe=2022-02-01&dataVencimentoAte=2022-02-01",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lancamentos"
+					],
+					"query": [
+						{
+							"key": "dataVencimentoDe",
+							"value": "2022-02-01"
+						},
+						{
+							"key": "dataVencimentoAte",
+							"value": "2022-02-01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Lançamentos dataVencimentoAte",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/lancamentos?dataVencimentoAte=2022-02-01",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lancamentos"
+					],
+					"query": [
+						{
+							"key": "dataVencimentoAte",
+							"value": "2022-02-01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Lançamentos paginação",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/lancamentos?size=1&page=2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lancamentos"
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "1"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar Lançamentos",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/lancamentos/8",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lancamentos",
+						"8"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
